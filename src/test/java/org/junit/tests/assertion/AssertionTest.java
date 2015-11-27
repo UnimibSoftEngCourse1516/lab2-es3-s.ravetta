@@ -40,8 +40,20 @@ public class AssertionTest {
     public void GreatherThan() {
         Integer o = new Integer(7);
         Integer o1 = new Integer(5);
+
         Comparatore c = new Comparatore();
         Assert.assertGreaterThan(o, o1, c);
+
+        Double o2 = new Double(7);
+        Double o3 = new Double(5);
+        Long o4 = new Long(7);
+        Long o5 = new Long(5);
+        ComparatoreInteger c0 = new ComparatoreInteger();
+        ComparatoreDouble c1 = new ComparatoreDouble();
+        ComparatoreLong c2 = new ComparatoreLong();
+        Assert.assertGreaterThan(o, o1, c0);
+        Assert.assertGreaterThan(o2, o3, c1);
+        Assert.assertGreaterThan(o4, o5, c2);
     }
 
     @Test(expected = AssertionError.class)
