@@ -26,6 +26,8 @@ import org.junit.internal.ArrayComparisonFailure;
 /**
  * Tests for {@link org.junit.Assert}
  */
+
+
 public class AssertionTest {
 // If you want to use 1.4 assertions, they will be reported correctly.
 // However, you need to add the -ea VM argument when running.
@@ -33,6 +35,14 @@ public class AssertionTest {
 // @Test (expected=AssertionError.class) public void error() {
 //      assert false;
 //  }
+
+    @Test
+    public void GreatherThan() {
+        Integer o = new Integer(7);
+        Integer o1 = new Integer(5);
+        Comparatore c = new Comparatore();
+        Assert.assertGreaterThan(o, o1, c);
+    }
 
     @Test(expected = AssertionError.class)
     public void fails() {

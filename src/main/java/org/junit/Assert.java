@@ -27,6 +27,18 @@ public class Assert {
      */
     protected Assert() {
     }
+    
+    /**
+     * Ciao!!!!
+     */
+    public static <T> void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator) {
+        if(comparator.compare(o1, o2) == 1) {
+            return;
+        }
+        else{
+            fail();
+        }
+    }
 
     /**
      * Asserts that a condition is true. If it isn't it throws an
