@@ -34,6 +34,14 @@ public class AssertionTest {
 //      assert false;
 //  }
 
+    @Test
+    public void GreatherThan() {
+        Integer o = new Integer(7);
+        Integer o1 = new Integer(5);
+        Comparatore c = new Comparatore();
+        Assert.assertGreaterThan(o, o1, c);
+    }
+
     @Test(expected = AssertionError.class)
     public void fails() {
         Assert.fail();
